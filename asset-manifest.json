@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/manoelacs/Theia---Teste-de-front-end/static/css/main.0fb734d6.chunk.css",
+    "main.css": "/manoelacs/Theia---Teste-de-front-end/static/css/main.fbb4c903.chunk.css",
     "main.js": "/manoelacs/Theia---Teste-de-front-end/static/js/main.036cbf72.chunk.js",
     "main.js.map": "/manoelacs/Theia---Teste-de-front-end/static/js/main.036cbf72.chunk.js.map",
     "runtime-main.js": "/manoelacs/Theia---Teste-de-front-end/static/js/runtime-main.32a4b2b6.js",
@@ -10,13 +10,13 @@
     "static/js/3.5d054c55.chunk.js": "/manoelacs/Theia---Teste-de-front-end/static/js/3.5d054c55.chunk.js",
     "static/js/3.5d054c55.chunk.js.map": "/manoelacs/Theia---Teste-de-front-end/static/js/3.5d054c55.chunk.js.map",
     "index.html": "/manoelacs/Theia---Teste-de-front-end/index.html",
-    "static/css/main.0fb734d6.chunk.css.map": "/manoelacs/Theia---Teste-de-front-end/static/css/main.0fb734d6.chunk.css.map",
+    "static/css/main.fbb4c903.chunk.css.map": "/manoelacs/Theia---Teste-de-front-end/static/css/main.fbb4c903.chunk.css.map",
     "static/js/2.d208c4bf.chunk.js.LICENSE.txt": "/manoelacs/Theia---Teste-de-front-end/static/js/2.d208c4bf.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.32a4b2b6.js",
     "static/js/2.d208c4bf.chunk.js",
-    "static/css/main.0fb734d6.chunk.css",
+    "static/css/main.fbb4c903.chunk.css",
     "static/js/main.036cbf72.chunk.js"
   ]
 }
