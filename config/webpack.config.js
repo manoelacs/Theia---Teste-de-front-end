@@ -539,7 +539,7 @@ module.exports = function (webpackEnv) {
               test: /\.less$/,
               use: getStyleLoaders(
                 {
-                  modules: true,
+                  modules: false,
                   importLoaders: 3,
                   sourceMap: isEnvProduction && shouldUseSourceMap,
                 },
