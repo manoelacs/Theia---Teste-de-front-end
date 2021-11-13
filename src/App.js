@@ -1,7 +1,9 @@
-import "./App.css";
+import "./App.less";
 import api from "./services/api";
 import { useState, useEffect } from "react";
 import Dropdown from "./components/Dropdown";
+import TextBox from "./components/Textbox";
+
 function App() {
   const [categories, setCategories] = useState([]);
   const [choiceCategory, setChoiceCategory] = useState("animal");
@@ -29,15 +31,19 @@ function App() {
   console.log(categories);
 
   return (
-    <div className="App">
-      <div>Selecione uma categoria</div>
-      <Dropdown
-        categories={categories}
-        setChoiceCategory={setChoiceCategory}
-        title={"Selecione uma categoria"}
-      />
-      <img src={joke.icon_url} alt="" />
-      <div>{joke.value}</div>
+    <div className="app">
+      <div className="app__header">The Chuck Noris jokes</div>
+      <div className="app__container">
+        <Dropdown
+          categories={categories}
+          setChoiceCategory={setChoiceCategory}
+          title={"Select the category"}
+        />
+        <TextBox
+          joke={joke.value}
+          img={<img src={joke.icon_url} alt="Chuck Norris icon" />}
+        />
+      </div>
     </div>
   );
 }
