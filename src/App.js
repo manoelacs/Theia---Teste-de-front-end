@@ -31,7 +31,11 @@ function App() {
   return (
     <div className="App">
       <div>Selecione uma categoria</div>
-      <Dropdown categories={categories} setChoiceCategory={setChoiceCategory} />
+      <Dropdown
+        categories={categories}
+        setChoiceCategory={setChoiceCategory}
+        title={"Selecione uma categoria"}
+      />
       <img src={joke.icon_url} alt="" />
       <div>{joke.value}</div>
     </div>

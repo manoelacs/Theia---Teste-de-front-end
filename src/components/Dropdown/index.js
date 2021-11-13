@@ -1,11 +1,13 @@
 import React from "react";
-import "./styles.css";
+import styles from "./styles.less";
 
-const Dropdown = ({ categories, setChoiceCategory }) => {
+const Dropdown = ({ categories, setChoiceCategory, title }) => {
   /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
   const toggleDropdown = () => {
-    document.getElementById("myDropdown").classList.toggle("show");
+    document
+      .getElementById(`${styles.myDropdown}`)
+      .classList.toggle(`${styles.show}`);
   };
 
   const itemSelected = (e, item) => {
@@ -27,9 +29,9 @@ toggle between hiding and showing the dropdown content */
   };
 
   return (
-    <div className="dropdown">
-      <button onClick={() => toggleDropdown()} className="dropbtn">
-        Dropdown
+    <div className={styles.dropdown}>
+      <button onClick={() => toggleDropdown()} className={styles.dropbtn}>
+        {title}
       </button>
       <div id="myDropdown" className="dropdown-content">
         {categories.map((item) => {
