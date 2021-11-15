@@ -3,10 +3,12 @@ import api from "./services/api";
 import { useState, useEffect } from "react";
 import Dropdown from "./components/Dropdown";
 import TextBox from "./components/Textbox";
+import EmptyBox from "./components/EmptyBox";
 
 function App() {
   const [categories, setCategories] = useState([]);
-  const [choiceCategory, setChoiceCategory] = useState("animal");
+  const [choiceCategory, setChoiceCategory] = useState("");
+  const [randomCategory, setRandomCategory] = useState(false);
   const [joke, setJoke] = useState({});
   console.log(choiceCategory, joke);
 
@@ -28,6 +30,14 @@ function App() {
       });
   }, [choiceCategory]);
 
+  useEffect(() => {
+    if (randomCategory) {
+      setChoiceCategory(
+        categories[Math.floor(Math.random() * categories.length)]
+      );
+    }
+  }, [randomCategory, categories]);
+
   console.log(categories);
 
   return (
@@ -39,10 +49,17 @@ function App() {
           setChoiceCategory={setChoiceCategory}
           title={"Select the category"}
         />
-        <TextBox
-          joke={joke.value}
-          img={<img src={joke.icon_url} alt="Chuck Norris icon" />}
-        />
+        {choiceCategory !== "" ? (
+          <TextBox
+            joke={joke.value}
+            img={<img src={joke.icon_url} alt="Chuck Norris icon" />}
+          />
+        ) : (
+          <EmptyBox
+            messenge={"No category was selected"}
+            SetRamdonCategory={setRandomCategory}
+          />
+        )}
       </div>
     </div>
   );
